@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-title: "Oswald", monospace;
+  --font-sans: "Montserrat", sans-serif;
+
+  --color-red-50: #ece7e6;
+  --color-red-100: #d8cecd;
+  --color-red-200: #b19d9b;
+  --color-red-300: #8b6d6a;
+  --color-red-400: #643c38;
+  --color-red-500: #3d0b06;
+  --color-red-600: #370a05;
+  --color-red-700: #2b0804;
+  --color-red-800: #1f0603;
+  --color-red-900: #120302;
+  --color-red-950: #060101;
+
+  --color-blue-50: #f4faff;
+  --color-blue-100: #dfefff;
+  --color-blue-200: #cae4ff;
+  --color-blue-300: #b4d9ff;
+  --color-blue-400: #9fceff;
+  --color-blue-500: #94c9ff;
+  --color-blue-600: #85b5e6;
+  --color-blue-700: #688db3;
+  --color-blue-800: #4a6580;
+  --color-blue-900: #2c3c4d;
+  --color-blue-950: #0f141a;
+
+  --color-purple-50: #f5f0f6;
+  --color-purple-100: #e1d3e4;
+  --color-purple-200: #cdb6d2;
+  --color-purple-300: #c2a7c9;
+  --color-purple-400: #ae89b7;
+  --color-purple-500: #9a6ca5;
+  --color-purple-600: #8b6195;
+  --color-purple-700: #7b5684;
+  --color-purple-800: #5c4163;
+  --color-purple-900: #2e2032;
+  --color-purple-950: #0f0b11;
+}
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052E16;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: var(--font-weight-bold);
+}
+
+html {
+  transition: all 0.3s ease-in-out;
+  transition-duration: 2600ms;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: all 0.3s ease-in-out;
+  transition-duration: 2600ms;
+}
+
+.page-enter-to, .page-leave-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-from, .page-leave-to {
+  opacity: 1;
+  transform: translateY(0);
+}

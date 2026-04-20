@@ -1,0 +1,47 @@
+<template>
+  <div>
+    <motion :preset="motionPreset" :delay="delay" tag="div" class="space-y-5 bg-transparent dark:bg-red-800 border-4 border-red-50 dark:border-red-200 rounded-3xl col-span-7 p-20 flex flex-col justify-center">
+      <div class="grid grid-cols-12 gap-1">
+        <div class="col-span-2">
+          <illustration-icon image="/illustrations/space.svg" />
+        </div>
+
+        <div class="col-span-10">
+          <h3 class="font-bold text-3xl">
+            Mise en place technique
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minima, voluptate est, rem officiis temporibus architecto voluptatibus autem minus earum provident sapiente vitae esse quam. Alias veritatis quasi vero recusandae.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-10">
+            <fake-button>
+              <icon name="lucide:arrow-up-right" />
+              En savoir plus
+            </fake-button>
+
+            <fake-button>
+              <icon name="lucide:arrow-up-right" />
+              En savoir plus
+            </fake-button>
+
+            <fake-button>
+              <icon name="lucide:arrow-up-right" />
+              En savoir plus
+            </fake-button>
+          </div>
+        </div>
+      </div>
+    </motion>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { VueUseMotions } from '~/types'
+
+const { motionPreset = VueUseMotions.RollVisibleOnceLeft, delay = 300 } = defineProps<{
+  motionPreset?: VueUseMotions
+  delay?: number
+}>()
+</script>
