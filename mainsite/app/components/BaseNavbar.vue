@@ -16,12 +16,12 @@
       </u-button>
     </nav>
 
-    <div class="flex items-center space-x-4">
-      <u-button>
+    <div class="items-center space-x-4">
+      <u-button class="hidden lg:flex">
         <icon name="lucide:sun" />
       </u-button>
 
-      <u-button variant="solid" size="xl" class="rounded-full">
+      <u-button variant="solid" size="xl" class="hidden lg:block rounded-full">
         <icon name="lucide:phone" />
         Me contacter
       </u-button>
