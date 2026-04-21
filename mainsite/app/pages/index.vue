@@ -31,44 +31,43 @@
       <!-- Spacer -->
       <div class="h-[90vh]" />
 
-      <div id="scrollable-body" class="relative min-h-screen bg-red-50 dark:bg-red-900 space-y-10 rounded-tr-3xl rounded-tl-3xl">
-        <!-- Curved top edge -->
-        <svg class="absolute -top-12 left-0 w-full" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z" fill="rgba(18,4,2,1)" />
-        </svg>
+      <div id="scrollable-body" class="relative min-h-screen bg-red-900 dark:bg-red-900 space-y-10 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
+        <blocks-content>
+          <blocks-section-container>
+            <!-- Intermediate -->
+            <grids-two />
 
-        <!-- Wrapper -->
-        <scrollable-section-wrapper>
-          <!-- Intermediate -->
-          <grids-two />
+            <div class="space-y-25">
+              <!-- Card 1 -->
+              <grids-single :motion-preset="VueUseMotions.SlideLeft" class="-rotate-1" />
 
-          <div class="space-y-25">
-            <!-- Card 1 -->
-            <grids-single :motion-preset="VueUseMotions.SlideLeft" class="-rotate-1" />
+              <!-- Card 2 -->
+              <grids-single :motion-preset="VueUseMotions.SlideRight" :delay="900" class="rotate-3" />
+            </div>
+          </blocks-section-container>
+        </blocks-content>
 
-            <!-- Card 2 -->
-            <grids-single :motion-preset="VueUseMotions.SlideRight" :delay="900" class="rotate-3" />
-          </div>
-        </scrollable-section-wrapper>
-
-        <!-- Brands -->
-        <div class="w-full bg-red-900 p-20">
+        <div class="p-20 bg-transparent rounded-3xl">
           Brands
         </div>
 
-        <scrollable-section-wrapper>
-          <!-- Accordion -->
-          <grids-section-text-content id="accordion-section">
-            <lazy-accordion-base hydrate-on-idle />
-          </grids-section-text-content>
-        </scrollable-section-wrapper>
+        <blocks-content>
+          <blocks-section-container>
+            <!-- Accordion -->
+            <grids-section-text-content id="accordion-section">
+              <lazy-accordion-base hydrate-on-idle />
+            </grids-section-text-content>
+          </blocks-section-container>
+        </blocks-content>
 
         <!-- Text Content -->
-        <lazy-grids-text hydrate-on-visible />
+        <!-- <lazy-grids-text hydrate-on-visible /> -->
 
-        <scrollable-section-wrapper>
-          <lazy-grids-sticky-section hydrate-on-visible />
-        </scrollable-section-wrapper>
+        <blocks-content>
+          <blocks-section-container>
+            <lazy-grids-sticky-section hydrate-on-visible />
+          </blocks-section-container>
+        </blocks-content>
 
         <!-- Footer -->
         <lazy-base-footer hydrate-on-visible />
