@@ -49,14 +49,21 @@
             <!-- Card 2 -->
             <grids-single :motion-preset="VueUseMotions.SlideRight" :delay="900" class="rotate-3" />
           </div>
+        </scrollable-section-wrapper>
 
-          <!-- Intermediate -->
+        <!-- Brands -->
+        <div class="w-full bg-red-900 p-20">
+          Brands
+        </div>
+
+        <scrollable-section-wrapper>
+          <!-- Accordion -->
           <grids-section-text-content id="accordion-section">
             <lazy-accordion-base hydrate-on-idle />
           </grids-section-text-content>
         </scrollable-section-wrapper>
 
-        <!-- Intermediate -->
+        <!-- Text Content -->
         <lazy-grids-text hydrate-on-visible />
 
         <scrollable-section-wrapper>

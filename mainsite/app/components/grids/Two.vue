@@ -17,7 +17,7 @@
       </u-button>
     </div>
 
-    <motion :preset="VueUseMotions.RollVisibleOnceRight" :delay="800" tag="div" class="space-y-5 bg-transparent dark:bg-red-800 border-4 border-red-50 dark:border-red-200 rounded-3xl p-10 col-span-7 flex flex-col justify-center rotate-3">
+    <motion :preset="VueUseMotions.RollVisibleOnceRight" :delay="800" tag="div" class="space-y-5 bg-red-100 dark:bg-red-800 border-4 border-red-50 dark:border-red-200 rounded-3xl p-10 col-span-7 flex flex-col justify-center rotate-3">
       <div class="grid grid-cols-12 gap-5">
         <div class="col-span-3">
           <illustration-icon image="/illustrations/space.svg" />

@@ -1,6 +1,6 @@
 <template>
   <!-- Intermediate -->
-  <div class="grid grid-cols-2 gap-10 p-30 bg-red-50 dark:bg-red-700 dark:text-red-100 rounded-3xl">
+  <div class="grid grid-cols-2 gap-10 p-30 bg-red-100 dark:bg-red-700 text-red-900 dark:text-red-100 rounded-3xl">
     <div class="space-y-5">
       <motion :preset="VueUseMotions.SlideVisibleOnceRight" tag="h2" class="font-bold text-6xl mb-5 text-wrap">
         Comment on travaille ensemble
@@ -19,8 +19,8 @@
     </div>
 
     <div class="sticky top-0 space-y-5">
-      <div v-for="idx in 4" :key="idx" class="group relative p-10 rounded-3xl bg-red-300 dark:bg-red-600 hover:rotate-2 transition-transform duration-800">
-        <div class="absolute top-2 left-2 w-10 h-10 rounded-full bg-red-600 dark:bg-red-300 font-bold flex items-center justify-center group-hover:-rotate-16 transition-transform ease-in-out duration-600">
+      <div v-for="idx in 4" :key="idx" class="group relative p-10 rounded-3xl bg-red-200 dark:bg-red-600 hover:rotate-2 transition-transform duration-800">
+        <div class="absolute top-2 left-2 w-10 h-10 rounded-full bg-red-300 dark:bg-red-300 font-bold flex items-center justify-center group-hover:-rotate-16 transition-transform ease-in-out duration-600">
           {{ idx }}
         </div>
 
