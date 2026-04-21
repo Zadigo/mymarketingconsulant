@@ -16,7 +16,7 @@
     <transition
       mode="out-in"
       enter-active-class="transition-all ease-out duration-500"
-      leave-active-class="transition-all ease-in duration-600"
+      leave-active-class="transition-all ease-in duration-400"
       enter-from-class="opacity-0 -translate-y-5"
       enter-to-class="opacity-100 translate-y-0"
       leave-from-class="opacity-100 translate-y-0"

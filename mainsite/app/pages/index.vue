@@ -115,6 +115,25 @@
           </blocks-section-container>
         </blocks-content>
 
+        <blocks-content>
+          <blocks-section-container>
+            <grids-section-text-content id="testimonials-section">
+              <template #title>
+                Ce que les clients disent de moi
+              </template>
+
+              <template #description>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, consequatur suscipit. Quae velit ipsum officiis culpa magni voluptatem aliquam alias. Sapiente soluta consequuntur unde velit cumque tenetur, perferendis delectus excepturi.
+              </template>
+
+              <!-- Customer Ratings -->
+              <div class="grid grid-cols-2 gap-10 mt-10">
+                <base-testimonial v-for="idx in 2" :key="idx" />
+              </div>
+            </grids-section-text-content>
+          </blocks-section-container>
+        </blocks-content>
+
         <!-- Footer -->
         <lazy-base-footer hydrate-on-visible />
       </div>

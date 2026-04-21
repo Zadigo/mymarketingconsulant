@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "tw-animate";
 
 @theme {
   --font-title: "Oswald", monospace;
@@ -65,12 +66,10 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
   transition: all 0.3s ease-in-out;
-  transition-duration: 2600ms;
 }
 
 .page-enter-active, .page-leave-active {
   transition: all 0.3s ease-in-out;
-  transition-duration: 2600ms;
 }
 
 .page-enter-to, .page-leave-from {

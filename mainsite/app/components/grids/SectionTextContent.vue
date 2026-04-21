@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-10 text-red-900 dark:text-red-50">
+  <div class="space-y-10 text-red-900 dark:text-red-50 h-auto">
     <!-- Title -->
     <h2 class="font-bold text-6xl text-center">
       <slot name="title" />
