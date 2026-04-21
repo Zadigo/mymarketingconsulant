@@ -63,9 +63,8 @@
           </blocks-section-container>
         </blocks-content>
 
-        <div class="p-20 bg-red-900 text-red-50 rounded-3xl">
-          Brands
-        </div>
+        <!-- Brands -->
+        <lazy-blocks-brands hydrate-on-visible />
 
         <!-- Section. Accordion -->
         <blocks-content>
