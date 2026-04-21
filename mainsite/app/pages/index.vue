@@ -31,7 +31,7 @@
       <!-- Spacer -->
       <div class="h-[90vh]" />
 
-      <div id="scrollable-body" class="relative min-h-screen bg-red-900 dark:bg-red-900 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
+      <div id="scrollable-body" class="relative min-h-screen bg-red-900 dark:bg-red-900 space-y-1 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
         <blocks-content>
           <blocks-section-container>
             <!-- Intermediate -->
@@ -51,10 +51,21 @@
           Brands
         </div>
 
+        <!-- Section. Accordion -->
         <blocks-content>
           <blocks-section-container>
-            <!-- Accordion -->
             <grids-section-text-content id="accordion-section">
+              <template #title>
+                Des problématiques courantes. <br> Une réponse claire.
+              </template>
+
+              <template #description>
+                J’interviens souvent dans les mêmes situations : du temps perdu, des décisions
+                prises à l’aveugle, des outils empilés sans logique. Mon rôle est d’identifier
+                le vrai problème, puis de mettre en place une réponse simple et adaptée.
+              </template>
+
+              <!-- Accordion -->
               <lazy-accordion-base hydrate-on-idle />
             </grids-section-text-content>
           </blocks-section-container>
@@ -65,7 +76,17 @@
 
         <blocks-content>
           <blocks-section-container>
-            <lazy-grids-sticky-section hydrate-on-visible />
+            <lazy-grids-sticky-section hydrate-on-visible>
+              <template #title>
+                Comment on travaille ensemble
+              </template>
+
+              <template #description>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates itaque consequuntur
+                accusamus, quis at dolorum necessitatibus, assumenda soluta quasi ratione perferendis! Necessitatibus eaque
+                a similique laboriosam, asperiores cupiditate ipsam?
+              </template>
+            </lazy-grids-sticky-section>
           </blocks-section-container>
         </blocks-content>
 

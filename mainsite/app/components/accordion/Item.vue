@@ -6,7 +6,7 @@
     </div>
 
     <div class="font-bold flex justify-between items-center">
-      <span>{{ item.title }}</span>
+      <span class="text-xl">{{ item.title }}</span>
 
       <div class="rounded-full w-10 h-10 flex items-center justify-center font-bold bg-red-400 text-red-50">
         {{ index }}
@@ -22,7 +22,7 @@
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-5"
     >
-      <p v-if="isOpened">
+      <p v-if="isOpened" class="font-light text-lg leading-8">
         {{ item.content }}
       </p>
     </transition>

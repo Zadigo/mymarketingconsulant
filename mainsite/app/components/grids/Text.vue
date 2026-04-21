@@ -7,7 +7,7 @@
       This is an intermediate section
     </motion>
 
-    <p class="text-xl leading-10">
+    <p class="text-xl leading-8">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsam, quasi odit non totam
       perspiciatis aut animi nobis incidunt qui ad ea fugit? Perferendis, impedit? Dolorem blanditiis
       facere distinctio. Ad!
