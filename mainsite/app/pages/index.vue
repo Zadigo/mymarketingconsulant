@@ -39,10 +39,26 @@
 
             <div class="space-y-25">
               <!-- Card 1 -->
-              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceLeft" class="-rotate-1 w-260" />
+              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceLeft" class="-rotate-1 w-260">
+                <template #title>
+                  Mise en place technique
+                </template>
+
+                <template #description>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minima, voluptate est, rem officiis temporibus architecto voluptatibus autem minus earum provident sapiente vitae esse quam. Alias veritatis quasi vero recusandae.
+                </template>
+              </grids-single>
 
               <!-- Card 2 -->
-              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceRight" :delay="500" class="rotate-3 w-260 ms-20" />
+              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceRight" :delay="500" class="rotate-3 w-260 ms-20">
+                <template #title>
+                  Mise en place technique
+                </template>
+
+                <template #description>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minima, voluptate est, rem officiis temporibus architecto voluptatibus autem minus earum provident sapiente vitae esse quam. Alias veritatis quasi vero recusandae.
+                </template>
+              </grids-single>
             </div>
           </blocks-section-container>
         </blocks-content>
@@ -72,7 +88,17 @@
         </blocks-content>
 
         <!-- Text Right -->
-        <lazy-grids-text-right hydrate-on-visible />
+        <lazy-grids-text-right hydrate-on-visible>
+          <template #title>
+            Un besoin ? Travaillons <word-highlight class="bg-purple-200 text-purple-50">ensemble</word-highlight>
+          </template>
+
+          <template #description>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates itaque consequuntur
+            accusamus, quis at dolorum necessitatibus, assumenda soluta quasi ratione perferendis! Necessitatibus eaque
+            a similique laboriosam, asperiores cupiditate ipsam?
+          </template>
+        </lazy-grids-text-right>
 
         <blocks-content>
           <blocks-section-container>

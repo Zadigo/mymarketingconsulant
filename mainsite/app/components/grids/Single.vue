@@ -7,11 +7,11 @@
 
       <div class="col-span-10">
         <h3 class="font-bold text-2xl mb-5">
-          Mise en place technique
+          <slot name="title" />
         </h3>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius minima, voluptate est, rem officiis temporibus architecto voluptatibus autem minus earum provident sapiente vitae esse quam. Alias veritatis quasi vero recusandae.
+        <p class="leading-8">
+          <slot name="description" />
         </p>
 
         <div class="flex flex-wrap gap-2 mt-10">
