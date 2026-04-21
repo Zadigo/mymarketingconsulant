@@ -31,7 +31,7 @@
       <!-- Spacer -->
       <div class="h-[90vh]" />
 
-      <div id="scrollable-body" class="relative min-h-screen bg-red-900 dark:bg-red-900 space-y-10 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
+      <div id="scrollable-body" class="relative min-h-screen bg-red-900 dark:bg-red-900 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
         <blocks-content>
           <blocks-section-container>
             <!-- Intermediate -->
@@ -39,15 +39,15 @@
 
             <div class="space-y-25">
               <!-- Card 1 -->
-              <grids-single :motion-preset="VueUseMotions.SlideLeft" class="-rotate-1" />
+              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceLeft" class="-rotate-1 w-260" />
 
               <!-- Card 2 -->
-              <grids-single :motion-preset="VueUseMotions.SlideRight" :delay="900" class="rotate-3" />
+              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceRight" :delay="500" class="rotate-3 w-260 ms-20" />
             </div>
           </blocks-section-container>
         </blocks-content>
 
-        <div class="p-20 bg-transparent rounded-3xl">
+        <div class="p-20 bg-red-900 text-red-50 rounded-3xl">
           Brands
         </div>
 
@@ -60,8 +60,8 @@
           </blocks-section-container>
         </blocks-content>
 
-        <!-- Text Content -->
-        <!-- <lazy-grids-text hydrate-on-visible /> -->
+        <!-- Text Right -->
+        <lazy-grids-text-right hydrate-on-visible />
 
         <blocks-content>
           <blocks-section-container>
