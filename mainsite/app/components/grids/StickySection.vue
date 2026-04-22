@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 gap-10 p-30 bg-red-100 dark:bg-red-700 text-red-900 dark:text-red-100 rounded-3xl">
+  <div class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-10 p-3 lg:p-30 bg-red-100 dark:bg-red-700 text-red-900 dark:text-red-100 rounded-3xl">
     <!-- Title -->
     <div class="space-y-5">
       <motion :preset="VueUseMotions.SlideVisibleOnceRight" tag="h2" class="font-bold text-6xl mb-5 text-wrap">

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-10 py-30 text-red-900 dark:text-red-50">
+  <div class="grid grid-cols-12 gap-10 py-10 lg:py-30 text-red-900 dark:text-red-50">
     <div class="space-y-5 col-span-5">
       <motion :preset="VueUseMotions.SlideVisibleOnceLeft" :delay="200" tag="h2" class="font-bold text-6xl mb-5 text-wrap leading-22">
         Un marketing plus <word-highlight class="bg-blue-700 text-blue-50">efficace</word-highlight>

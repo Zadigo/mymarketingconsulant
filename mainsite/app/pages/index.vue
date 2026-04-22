@@ -127,7 +127,7 @@
               </template>
 
               <!-- Customer Ratings -->
-              <div class="grid grid-cols-2 gap-10 mt-10">
+              <div class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-10 mt-10">
                 <base-testimonial v-for="idx in 2" :key="idx" />
               </div>
             </grids-section-text-content>

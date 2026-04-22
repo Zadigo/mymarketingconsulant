@@ -16,7 +16,7 @@
       </u-button>
     </nav>
 
-    <div class="items-center space-x-4">
+    <div class="flex items-center space-x-4">
       <u-button class="hidden lg:flex">
         <icon name="lucide:sun" />
       </u-button>
@@ -39,15 +39,15 @@
 const links = [
   {
     name: 'Home',
-    href: '/',
+    href: '/'
   },
   {
     name: 'About',
-    href: '/a-propos',
+    href: '/a-propos'
   },
   {
     name: 'Contact',
-    href: '/contact',
+    href: '/contact'
   }
 ]
 </script>

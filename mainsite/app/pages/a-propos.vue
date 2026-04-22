@@ -4,7 +4,7 @@
       <div :style="{ backgroundImage: `url('/images/img2.jpg')` }" class="w-full h-150 rounded-3xl bg-no-repeat bg-center bg-cover" />
 
       <h1 class="font-bold text-6xl lg:text-8xl mb-5 text-center">
-        A propos de moi
+        À propos de moi
       </h1>
 
       <p class="font-title text-lg leading-8 text-center mt-10">
@@ -18,7 +18,7 @@
       <!-- Statistics -->
       <div id="statistics" ref="statisticsEl" class="py-20">
         <div class="grid grid-rows-3 lg:grid-rows-1 grid-cols-0 lg:grid-cols-3 gap-10">
-          <div class="text-center bg-red-700 p-5 rounded-3xl">
+          <div class="text-center bg-red-300 p-5 rounded-3xl">
             <h2 class="text-4xl font-bold">
               <span ref="experienceTarget">{{ animatedExperience.toFixed(0) }}</span>+
             </h2>
@@ -27,18 +27,18 @@
             </p>
           </div>
 
-          <div class="text-center bg-red-700 p-5 rounded-3xl">
+          <div class="text-center bg-red-300 p-5 rounded-3xl">
             <h2 class="text-4xl font-bold">
-              100+
+              {{ animatedProjects.toFixed(0) }}+
             </h2>
             <p class="text-sm mt-2">
               Projets réussis
             </p>
           </div>
 
-          <div class="text-center bg-red-700 p-5 rounded-3xl">
+          <div class="text-center bg-red-300 p-5 rounded-3xl">
             <h2 class="text-4xl font-bold">
-              50+
+              {{ animatedClients.toFixed(0) }}+
             </h2>
             <p class="text-sm mt-2">
               Clients satisfaits
@@ -47,24 +47,24 @@
         </div>
       </div>
 
-      <div class="rounded-3xl p-5 lg:p-20 bg-purple-700 dark:bg-purple-900">
+      <div class="rounded-3xl p-5 lg:p-20 bg-purple-400 dark:bg-purple-900">
         <h3 class="text-3xl lg:text-6xl text-center mb-10">
           Ce que je fais concrètement
         </h3>
 
         <div class="grid grid-rows-3 lg:grid-rows-1 grid-cols-1 lg:grid-cols-3 gap-5">
           <motion-group :preset="VueUseMotions.SlideVisibleOnceTop" :delay="300">
-            <div v-for="i in 3" :key="i" class="rounded-3xl bg-purple-800 p-15">
+            <div v-for="idx in 3" :key="idx" class="rounded-3xl bg-purple-500 p-15">
               <h4 class="text-3xl mb-5">
                 Stratégie de marketing digital
               </h4>
 
-              <p>
+              <p class="leading-8 text-lg">
                 Je développe des stratégies de marketing digital personnalisées pour aider les entreprises à atteindre leurs objectifs en ligne, en utilisant les dernières tendances et technologies du secteur.
               </p>
 
               <ul class="mt-5 space-y-2">
-                <li v-for="i in 5" :key="i" class="flex items-center gap-2 font-semibold">
+                <li v-for="idx2 in 5" :key="idx2" class="flex items-center gap-2 font-semibold">
                   <icon name="lucide:circle-check" />
                   <span>SEO & contenu orientés conversion</span>
                 </li>
@@ -75,14 +75,14 @@
       </div>
 
       <div class="rounded-3xl p-1 lg:p-20">
-        <motion :preset="VueUseMotions.PopVisibleOnce">
+        <motion :preset="VueUseMotions.SlideVisibleOnceTop">
           <h3 class="text-3xl lg:text-6xl text-center mb-10">
             Les valeurs qui me tiennent à coeur
           </h3>
         </motion>
 
         <div class="grid grid-rows-4 grid-cols-0 lg:grid-cols-2 lg:grid-rows-2 gap-4">
-          <div v-for="i in 4" :key="i" class="rounded-3xl bg-red-800 p-10">
+          <div v-for="i in 4" :key="i" class="rounded-3xl bg-red-300 p-10">
             <h4 class="text-3xl mb-5">
               Clarté avant tout
             </h4>
@@ -99,7 +99,6 @@
 
 <script setup lang="ts">
 import { VueUseMotions } from '~/types'
-import { TransitionPresets } from '@vueuse/core'
 
 definePageMeta({
   layout: 'other'
@@ -123,18 +122,11 @@ if (import.meta.client) {
 }
 
 const experienceValue = shallowRef(0)
-const animatedExperience = ref(0)
+const animatedExperience = useAnimateText(experienceValue, 10, isVisible)
 
-onMounted(() => {
-  const _animatedExperience = useTransition(experienceValue, {
-    duration: 700,
-    easing: TransitionPresets.easeInCubic
-  })
+const projectsValue = shallowRef(0)
+const animatedProjects = useAnimateText(projectsValue, 100, isVisible)
 
-  syncRef(animatedExperience, _animatedExperience, { direction: 'rtl' })
-
-  whenever(isVisible, () => {
-    experienceValue.value = 10
-  })
-})
+const clientsValue = shallowRef(0)
+const animatedClients = useAnimateText(clientsValue, 50, isVisible)
 </script>
