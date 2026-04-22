@@ -17,12 +17,9 @@
     </nav>
 
     <div class="flex items-center space-x-4">
-      <u-button class="hidden lg:flex">
-        <icon name="lucide:sun" />
-      </u-button>
+      <u-button icon="lucide:sun" class="hidden lg:flex" />
 
-      <u-button to="/contact" variant="solid" size="xl" class="hidden lg:block rounded-full">
-        <icon name="lucide:phone" />
+      <u-button icon="lucide:phone" to="/contact" variant="solid" size="lg" class="hidden lg:block rounded-full">
         Me contacter
       </u-button>
 

@@ -10,9 +10,8 @@
         <slot name="description" />
       </p>
 
-      <u-button size="xl" class="rounded-full">
+      <u-button :to="to" trailing-icon="lucide:arrow-up-right" size="xl" class="rounded-full">
         En savoir plus
-        <icon name="lucide:arrow-up-right" />
       </u-button>
     </div>
 

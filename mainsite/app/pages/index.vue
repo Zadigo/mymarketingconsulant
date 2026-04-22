@@ -5,8 +5,8 @@
 
     <!-- Lead -->
     <div id="lead" class="absolute z-30 top-1/50 left-1/2 transform -translate-x-1/2 space-y-8 p-10 max-w-5xl w-full flex flex-col justify-center text-center text-red-50">
-      <h1 class="font-bold text-8xl leading-28">
-        Un marketing plus <word-highlight class="bg-red-400 text-red-50">efficace</word-highlight> {{ xScroll }}
+      <h1 class="font-bold text-8xl leading-32">
+        Un marketing plus <word-highlight class="bg-info-700 text-info-50">efficace</word-highlight> {{ xScroll }}
       </h1>
 
       <p class="text-2xl font-light">
@@ -31,7 +31,7 @@
       <!-- Spacer -->
       <div class="h-[90vh]" />
 
-      <div id="scrollable-body" class="relative min-h-screen bg-red-900 dark:bg-red-900 space-y-1 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
+      <div id="scrollable-body" class="relative min-h-screen bg-primary-900 dark:bg-primary-900 space-y-1 rounded-tr-3xl rounded-tl-3xl overflow-hidden">
         <blocks-content>
           <blocks-section-container>
             <!-- Intermediate -->
@@ -69,7 +69,7 @@
         <!-- Section. Accordion -->
         <blocks-content>
           <blocks-section-container>
-            <grids-section-text-content id="accordion-section" to="/contact">
+            <grids-section-text-content id="accordion-section" :show-cta="true" to="/contact">
               <template #title>
                 Des problématiques courantes. <br> Une réponse claire.
               </template>
@@ -89,7 +89,7 @@
         <!-- Text Right -->
         <lazy-grids-text-right hydrate-on-visible>
           <template #title>
-            Un besoin ? Travaillons <word-highlight class="bg-purple-200 text-purple-50">ensemble</word-highlight>
+            Un besoin ? Travaillons <word-highlight class="bg-primary-200 text-primary-50">ensemble</word-highlight>
           </template>
 
           <template #description>
@@ -127,8 +127,8 @@
               </template>
 
               <!-- Customer Ratings -->
-              <div class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-10 mt-10">
-                <base-testimonial v-for="idx in 2" :key="idx" />
+              <div class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-3 gap-3 mt-20">
+                <base-testimonial v-for="idx in 3" :key="idx" />
               </div>
             </grids-section-text-content>
           </blocks-section-container>

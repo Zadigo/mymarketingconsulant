@@ -68,20 +68,6 @@ html {
   transition: all 0.8s ease-in-out;
 }
 
-/* .page-enter-active, .page-leave-active {
-  transition: all 0.8s ease-in-out;
-}
-
-.page-enter-to, .page-leave-from {
-  opacity: 0;
-  transform: translateX(20px);
-}
-
-.page-enter-from, .page-leave-to {
-  opacity: 1;
-  transform: translateX(0);
-} */
-
 :root {
   --ui-bg: #ece7e6;
   --ui-bg-muted: var(--ui-color-neutral-50);
@@ -95,4 +81,41 @@ html {
   --ui-border-inverted: var(--ui-color-neutral-900);
 
   --ui-primary: var(--color-red-500);
+  --ui-secondary: var(--color-purple-500);
+
+  --ui-color-primary-50: var(--color-red-50);
+  --ui-color-primary-100: var(--color-red-100);
+  --ui-color-primary-200: var(--color-red-200);
+  --ui-color-primary-300: var(--color-red-300);
+  --ui-color-primary-400: var(--color-red-400);
+  --ui-color-primary-500: var(--color-red-500);
+  --ui-color-primary-600: var(--color-red-600);
+  --ui-color-primary-700: var(--color-red-700);
+  --ui-color-primary-800: var(--color-red-800);
+  --ui-color-primary-900: var(--color-red-900);
+  --ui-color-primary-950: var(--color-red-950);
+
+  --ui-color-secondary-50: var(--color-purple-50);
+  --ui-color-secondary-100: var(--color-purple-100);
+  --ui-color-secondary-200: var(--color-purple-200);
+  --ui-color-secondary-300: var(--color-purple-300);
+  --ui-color-secondary-400: var(--color-purple-400);
+  --ui-color-secondary-500: var(--color-purple-500);
+  --ui-color-secondary-600: var(--color-purple-600);
+  --ui-color-secondary-700: var(--color-purple-700);
+  --ui-color-secondary-800: var(--color-purple-800);
+  --ui-color-secondary-900: var(--color-purple-900);
+  --ui-color-secondary-950: var(--color-purple-950);
+
+  --ui-color-info-50: var(--color-blue-50);
+  --ui-color-info-100: var(--color-blue-100);
+  --ui-color-info-200: var(--color-blue-200);
+  --ui-color-info-300: var(--color-blue-300);
+  --ui-color-info-400: var(--color-blue-400);
+  --ui-color-info-500: var(--color-blue-500);
+  --ui-color-info-600: var(--color-blue-600);
+  --ui-color-info-700: var(--color-blue-700);
+  --ui-color-info-800: var(--color-blue-800);
+  --ui-color-info-900: var(--color-blue-900);
+  --ui-color-info-950: var(--color-blue-950);
 }

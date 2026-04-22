@@ -18,8 +18,7 @@
     </p>
 
     <div class="w-full inline-flex items-center justify-center gap-10 mt-10">
-      <fake-button v-for="idx in 3" :key="idx">
-        <icon name="lucide:arrow-up-right" />
+      <fake-button v-for="idx in 3" :key="idx" trailing-icon="lucide:arrow-up-right">
         En savoir plus
       </fake-button>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-purple-500 p-2 rounded-sm flex items-center justify-center gap-2">
+  <div class="bg-secondary-400 text-secondary-50 text-sm font-semibold p-2 rounded-lg flex items-center justify-center gap-2">
     <slot />
   </div>
 </template>

@@ -6,13 +6,13 @@ export default defineAppConfig({
       neutral: 'slate'
     },
     button: {
-      variants: {
-        size: {
-          xl: {
-            base: 'px-6 py-4'
-          }
-        }
-      }
+      // variants: {
+      //   size: {
+      //     xl: {
+      //       base: 'px-6 py-4'
+      //     }
+      //   }
+      // }
     }
   }
 })

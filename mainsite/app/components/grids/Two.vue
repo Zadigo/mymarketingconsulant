@@ -2,7 +2,7 @@
   <div class="grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-12 gap-10 py-10 lg:py-30 text-red-900 dark:text-red-50">
     <div class="space-y-5 col-span-12 lg:col-span-5">
       <motion :preset="VueUseMotions.SlideVisibleOnceLeft" :delay="200" tag="h2" class="font-bold text-6xl mb-5 text-wrap leading-22">
-        Un marketing plus <word-highlight class="bg-blue-700 text-blue-50">efficace</word-highlight>
+        Un marketing plus <word-highlight class="bg-info-700 text-info-50">efficace</word-highlight>
       </motion>
 
       <p>
@@ -11,9 +11,8 @@
         fonctionne vraiment et pourquoi.
       </p>
 
-      <u-button :to="to" size="xl" class="rounded-full">
+      <u-button :to="to" trailing-icon="lucide:arrow-up-right" size="xl" class="rounded-full">
         En savoir plus
-        <icon name="lucide:arrow-up-right" />
       </u-button>
     </div>
 

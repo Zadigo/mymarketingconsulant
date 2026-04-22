@@ -14,9 +14,8 @@
 
     <!-- CTA -->
     <div v-if="showCta" class="flex justify-center mt-10">
-      <u-button :to="to" size="xl" class="rounded-full">
+      <u-button :to="to" trailing-icon="lucide:arrow-up-right" size="xl" class="rounded-full">
         En savoir plus
-        <icon name="lucide:arrow-up-right" />
       </u-button>
     </div>
   </div>
