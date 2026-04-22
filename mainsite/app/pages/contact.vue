@@ -66,7 +66,7 @@
 
       <blocks-content>
         <blocks-section-container>
-          <grids-section-text-content id="accordion-section">
+          <grids-section-text-content id="accordion-section" :show-cta="false" to="/contact">
             <template #title>
               FAQ
             </template>

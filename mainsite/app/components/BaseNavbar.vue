@@ -21,7 +21,7 @@
         <icon name="lucide:sun" />
       </u-button>
 
-      <u-button variant="solid" size="xl" class="hidden lg:block rounded-full">
+      <u-button to="/contact" variant="solid" size="xl" class="hidden lg:block rounded-full">
         <icon name="lucide:phone" />
         Me contacter
       </u-button>
@@ -38,11 +38,7 @@
 <script setup lang="ts">
 const links = [
   {
-    name: 'Home',
-    href: '/'
-  },
-  {
-    name: 'About',
+    name: 'À propos',
     href: '/a-propos'
   },
   {

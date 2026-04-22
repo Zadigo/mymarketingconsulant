@@ -13,11 +13,18 @@
     <slot />
 
     <!-- CTA -->
-    <div class="flex justify-center mt-10">
-      <u-button size="xl">
+    <div v-if="showCta" class="flex justify-center mt-10">
+      <u-button :to="to" size="xl">
         En savoir plus
         <icon name="lucide:arrow-up-right" />
       </u-button>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+  to: string
+  showCta?: boolean
+}>()
+</script>

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
-@import "tw-animate";
+/* @import "tw-animate"; */
 
 @theme {
   --font-title: "Oswald", monospace;
@@ -65,19 +65,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
-.page-enter-active, .page-leave-active {
-  transition: all 0.3s ease-in-out;
+/* .page-enter-active, .page-leave-active {
+  transition: all 0.8s ease-in-out;
 }
 
 .page-enter-to, .page-leave-from {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(20px);
 }
 
 .page-enter-from, .page-leave-to {
   opacity: 1;
-  transform: translateY(0);
-}
+  transform: translateX(0);
+} */

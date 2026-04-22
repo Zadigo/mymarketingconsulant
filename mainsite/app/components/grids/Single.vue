@@ -1,5 +1,5 @@
 <template>
-  <motion :preset="motionPreset" :delay="delay" tag="div" class="space-y-5 bg-red-100 dark:bg-red-800 border-4 border-red-50 dark:border-red-200 text-red-900 dark:text-red-50 rounded-3xl col-span-7 p-20 flex flex-col justify-center">
+  <motion :preset="motionPreset" :delay="delay" tag="div" class="space-y-5 bg-red-100 dark:bg-red-800 border-4 border-red-50 dark:border-red-200 text-red-900 dark:text-red-50 rounded-3xl p-20 flex flex-col justify-center">
     <div class="grid grid-cols-12 gap-1">
       <div class="col-span-2">
         <illustration-icon image="/illustrations/space.svg" />

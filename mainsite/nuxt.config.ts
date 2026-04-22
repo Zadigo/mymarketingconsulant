@@ -27,17 +27,33 @@ export default defineNuxtConfig({
   },
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+      duration: { enter: 400, leave: 200 },
+      // enterActiveClass: 'transition-all ease-in-out',
+      // leaveActiveClass: 'transition-all ease-in-out',
+      enterFromClass: 'opacity-0 translate-x-5',
+      enterToClass: 'opacity-100 translate-x-0',
+      leaveFromClass: 'opacity-100 translate-x-0',
+      leaveToClass: 'opacity-0 translate-x-5'
+    },
+    head: {
+      titleTemplate: '%s - My Marketing Consultant'
+    }
   },
 
   css: ['~/assets/css/main.css'],
 
-  // ui: {
-  //   prefix: 'Nuxt'
-  // },
+  site: {
+    name: 'My Marketing Consultant',
+    url: process.env.NUXT_PUBLIC_SITE_URL
+  },
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/a-propos': { prerender: true },
+    '/contact': { prerender: true }
   },
 
   compatibilityDate: '2025-01-15',
@@ -69,7 +85,8 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts',
     customRoutes: 'config',
     pages: {
-      faq: { fr: '/faq', en: '/faq' }
+      'a-propos': { fr: '/a-propos', en: '/about' },
+      'contact': { fr: '/contact', en: '/contact' }
     },
     locales: [
       {

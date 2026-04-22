@@ -4,7 +4,7 @@
     <div class="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" :style="{ backgroundImage: `url(/images/img1.jpg)` }" />
 
     <!-- Lead -->
-    <div id="lead" class="absolute top-1/50 left-1/2 transform -translate-x-1/2 space-y-8 p-10 max-w-5xl w-full flex flex-col justify-center text-center text-red-50">
+    <div id="lead" class="absolute z-30 top-1/50 left-1/2 transform -translate-x-1/2 space-y-8 p-10 max-w-5xl w-full flex flex-col justify-center text-center text-red-50">
       <h1 class="font-bold text-8xl leading-28">
         Un marketing plus <word-highlight class="bg-red-400 text-red-50">efficace</word-highlight> {{ xScroll }}
       </h1>
@@ -16,11 +16,11 @@
       </p>
 
       <div class="flex justify-center gap-2">
-        <u-button size="xl" class="rounded-full">
+        <u-button to="/contact" size="xl" class="rounded-full">
           Discutons de votre projet <icon name="lucide:arrow-up-right" />
         </u-button>
 
-        <u-button variant="link" size="xl" class="rounded-full">
+        <u-button to="/contact" variant="link" size="xl" class="rounded-full">
           Discutons de votre projet
           <icon name="lucide:arrow-up-right" />
         </u-button>
@@ -35,7 +35,7 @@
         <blocks-content>
           <blocks-section-container>
             <!-- Intermediate -->
-            <grids-two />
+            <grids-two to="/contact" />
 
             <div class="space-y-25">
               <!-- Card 1 -->
@@ -50,7 +50,7 @@
               </grids-single>
 
               <!-- Card 2 -->
-              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceRight" :delay="500" class="rotate-3 w-260 ms-20">
+              <grids-single :motion-preset="VueUseMotions.SlideVisibleOnceRight" :delay="500" class="rotate-3 w-260 ms-0 lg:ms-20">
                 <template #title>
                   Mise en place technique
                 </template>
@@ -69,7 +69,7 @@
         <!-- Section. Accordion -->
         <blocks-content>
           <blocks-section-container>
-            <grids-section-text-content id="accordion-section">
+            <grids-section-text-content id="accordion-section" to="/contact">
               <template #title>
                 Des problématiques courantes. <br> Une réponse claire.
               </template>
@@ -117,7 +117,7 @@
 
         <blocks-content>
           <blocks-section-container>
-            <grids-section-text-content id="testimonials-section">
+            <grids-section-text-content id="testimonials-section" to="/contact">
               <template #title>
                 Ce que les clients disent de moi
               </template>
@@ -133,6 +133,9 @@
             </grids-section-text-content>
           </blocks-section-container>
         </blocks-content>
+
+        <!-- CTA -->
+        <lazy-bottom-cta to="/contact" hydrate-on-visible />
 
         <!-- Footer -->
         <lazy-base-footer hydrate-on-visible />
