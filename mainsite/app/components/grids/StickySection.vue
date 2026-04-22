@@ -10,7 +10,7 @@
         <slot name="description" />
       </p>
 
-      <u-button size="xl">
+      <u-button size="xl" class="rounded-full">
         En savoir plus
         <icon name="lucide:arrow-up-right" />
       </u-button>
@@ -41,4 +41,8 @@
 
 <script setup lang="ts">
 import { VueUseMotions } from '~/types'
+
+defineProps<{
+  to: string
+}>()
 </script>

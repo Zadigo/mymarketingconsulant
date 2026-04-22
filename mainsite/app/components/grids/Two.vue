@@ -11,7 +11,7 @@
         fonctionne vraiment et pourquoi.
       </p>
 
-      <u-button :to="to" size="xl">
+      <u-button :to="to" size="xl" class="rounded-full">
         En savoir plus
         <icon name="lucide:arrow-up-right" />
       </u-button>

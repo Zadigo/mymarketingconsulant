@@ -5,7 +5,7 @@
     </h3>
 
     <div :class="{ 'my-10': hasNewsletter, 'mt-10': !hasNewsletter }" class="flex justify-center">
-      <u-button size="xl" :to="to">
+      <u-button size="xl" :to="to" class="rounded-full">
         Discutons de votre projet
         <icon name="lucide:arrow-up-right" />
       </u-button>

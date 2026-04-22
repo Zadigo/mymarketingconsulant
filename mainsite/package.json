@@ -39,6 +39,8 @@
     "@nuxtjs/ngrok": "4.0.0",
     "@pinia/nuxt": "0.11.3",
     "@playwright/test": "^1.59.1",
+    "@takumi-rs/core": "^1.0.15",
+    "@takumi-rs/wasm": "^1.0.15",
     "@vitest/coverage-v8": "^4.1.4",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/components": "^14.2.1",

@@ -1,3 +1,5 @@
+export type Nullable<T> = T | null
+
 export enum VueUseMotions {
   Fade = 'fade',
   FadeVisible = 'fadeVisible',
@@ -29,4 +31,9 @@ export enum VueUseMotions {
   SlideVisibleOnceLeft = 'slideVisibleOnceLeft',
   SlideVisibleOnceRight = 'slideVisibleOnceRight',
   SlideVisibleOnceBottom = 'slideVisibleOnceBottom'
+}
+
+export type PageTitleOrDescription<T extends string> = {
+  titles: Record<T, string>
+  descriptions: Record<T, string>
 }

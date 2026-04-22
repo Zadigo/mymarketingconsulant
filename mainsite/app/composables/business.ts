@@ -1,0 +1,232 @@
+import type { Nullable } from '~/types'
+
+export interface WebsiteProvider {
+  legalName: string
+  url: string
+}
+
+export interface CloudProvider extends WebsiteProvider {
+  description: string
+  address: string
+  rcs: string
+}
+
+export interface ContactPoints {
+  telephone: string
+  email: string
+  address: string
+}
+
+export type SocialPlatform = 'instagram' | 'facebook' | 'pinterest' | 'twitter' | 'linkedin' | 'tiktok' | 'youtube'
+
+export type Social = {
+  url: string
+  handle?: string
+}
+
+export interface BusinessDetails {
+  name: string
+  legalName: string
+  siren: string
+  siret: string
+  numberoTVA: Nullable<string>
+  creationDate: string
+  alternateName: string | string[]
+  description: string
+  logo: string
+  sameAs: string[]
+  image: string[]
+  rcs: string
+  address: {
+    street: string
+    postalCode: string
+    city: string
+    lat: number | null
+    lng: number | null
+  }
+  priceRange: '$' | '$$' | '$$$'
+  foundingDate: string
+  foundingLocation: string
+  founderImage: Nullable<string>
+  shareCapital: Nullable<string>
+  founder: string
+  founderDescription: string
+  founderKnowsAbout: string[]
+  webContentManager: string
+  publishingDirector: string
+  editorInChief: string
+  websiteProvider: WebsiteProvider
+  cloudProvider: CloudProvider
+  contact: ContactPoints
+  socials: Partial<Record<SocialPlatform, Social>>
+}
+
+export const businessDetails: BusinessDetails = {
+  name: 'My Consulting Company',
+  legalName: 'My Consulting Company',
+  alternateName: [
+    'My Consulting Company',
+    'My Consulting Co',
+    'MCC'
+  ],
+  siren: '790 849 574',
+  siret: '790 849 574 00039',
+  numberoTVA: 'FR29790849574',
+  creationDate: '2024-12-14',
+  description: 'Salon de coiffure multiculturel spécialisé dans tous types de cheveux : crépus, bouclés, lisses. Soins, coupes et styles sur-mesure',
+  logo: '',
+  sameAs: [
+    'https://fr.pinterest.com/labeautedineiah',
+    'https://facebook.com/labeautedineiah',
+    'https://www.instagram.com/ineiah'
+  ],
+  image: [
+
+  ],
+  rcs: '',
+  address: {
+    street: '13 Place Nouvelle Aventure',
+    postalCode: '59000',
+    city: 'Lille',
+    lat: 50.626999404132064,
+    lng: 3.0499777837365993
+  },
+  priceRange: '$$',
+  foundingDate: '2024-12-14',
+  foundingLocation: 'Lille, France',
+  founderImage: null,
+  shareCapital: null,
+  founder: 'Natacha Morel',
+  founderDescription: 'Passionnée par le marketing digital et la création de contenu, Natacha a fondé My Consulting Company pour aider les entreprises à se démarquer en ligne. Avec une expertise en stratégie de marque, gestion des réseaux sociaux et création de contenu, elle accompagne ses clients dans leur transformation digitale.',
+  founderKnowsAbout: [
+    'Marketing digital',
+    'Stratégie de marque',
+    'Gestion des réseaux sociaux',
+    'Création de contenu',
+    'SEO',
+    'Publicité en ligne'
+  ],
+  webContentManager: 'Natacha Morel',
+  publishingDirector: 'Natacha Morel',
+  editorInChief: 'Natacha Morel',
+  websiteProvider: {
+    legalName: 'Gency313',
+    url: 'https://johnpm-consulting.fr/'
+  },
+  cloudProvider: {
+    legalName: 'SAS OVH',
+    url: 'http://www.ovhcloud.com/fr/',
+    description: 'OVH SAS est une filiale de la société OVH Groupe SA, société immatriculée au RCS de Lille',
+    address: '2 rue Kellermann - 59100 Roubaix - France',
+    rcs: '424 761 419 00045'
+  },
+  contact: {
+    telephone: '+33 07 86 20 94 59',
+    email: 'labeautedineiah@gmail.com',
+    address: '13 Place Nouvelle Aventure, 59000 Lille'
+  },
+  socials: {
+    instagram: {
+      url: 'https://www.instagram.com/ineiah',
+      handle: '@ineiah'
+    },
+    facebook: {
+      url: 'https://www.facebook.com/labeautedineiah',
+      handle: 'labeautedineiah'
+    },
+    pinterest: {
+      url: 'https://fr.pinterest.com/labeautedineiah',
+      handle: 'labeautedineiah'
+    }
+  }
+}
+
+type BusinessDetailsKeys = keyof BusinessDetails
+
+type BusinessDetailsKeyValue = {
+  [ K in BusinessDetailsKeys ]: BusinessDetails[K]
+}
+
+/**
+ * A composable to access business details throughout the application. It provides a `get` function
+ * to retrieve specific details by key, ensuring type safety and consistency across the app.
+ */
+export function useBusinessDetails() {
+  function get<K extends BusinessDetailsKeys>(key: K): BusinessDetailsKeyValue[K] {
+    return businessDetails[key]
+  }
+
+  const reactiveGet = reactify(get)
+  const activeSocials = computed(() => Object.keys(get('socials')) as SocialPlatform[])
+
+  function getSocial(platform: SocialPlatform): Social | null {
+    const socials = get('socials')
+    return socials[platform] || null
+  }
+
+  function getSocialIcon(platform: SocialPlatform): string {
+    const icons: Record<SocialPlatform, string> = {
+      instagram: 'fa-brands:instagram',
+      facebook: 'fa-brands:facebook',
+      pinterest: 'fa-brands:pinterest',
+      twitter: 'fa-brands:twitter',
+      linkedin: 'fa-brands:linkedin',
+      tiktok: 'fa-brands:tiktok',
+      youtube: 'fa-brands:youtube'
+    }
+    return icons[platform]
+  }
+
+  const address = computed(() => {
+    const address = get('address')
+    return `${address.street}, ${address.postalCode} ${address.city}`
+  })
+
+  function suffixLegalName(name: Nullable<string>, separator: string = ' - '): string {
+    const legalName = get('legalName')
+    return `${name ?? ''}${separator}${legalName}`
+  }
+
+  return {
+    /**
+     * The business details object containing all relevant information about the business,
+     * including contact details, social media links, and more.
+     */
+    businessDetails,
+    /**
+     * A computed property that returns an array of active social media
+     * platforms based on the provided socials in the business details.
+     */
+    activeSocials,
+    /**
+     * A computed property that returns the full address of the business
+     * as a formatted string, combining the street, postal code, and city.
+     */
+    address,
+    /**
+     * A function that appends the legal name of the business to a given name,
+     * separated by a specified separator (default is ' - ').
+     */
+    suffixLegalName,
+    /**
+     * A function to retrieve specific business details by key, ensuring type safety.
+     * @param key - The key of the business detail to retrieve.
+     */
+    get,
+    /**
+     * A reactive version of the `get` function, useful for reactive contexts.
+     * @param key - The key of the business detail to retrieve reactively.
+     */
+    reactiveGet,
+    /**
+     * A function to retrieve social media details for a specific platform.
+     * @param platform - The social media platform to retrieve details for (e.g., 'instagram', 'facebook').
+     */
+    getSocial,
+    /**
+     * A function to retrieve the icon name for a specific social media platform.
+     * @param platform - The social media platform to retrieve the icon for (e.g., 'instagram', 'facebook').
+     */
+    getSocialIcon
+  }
+}

@@ -81,3 +81,18 @@ html {
   opacity: 1;
   transform: translateX(0);
 } */
+
+:root {
+  --ui-bg: #ece7e6;
+  --ui-bg-muted: var(--ui-color-neutral-50);
+  --ui-bg-elevated: var(--ui-color-neutral-100);
+  --ui-bg-accented: var(--ui-color-neutral-200);
+  --ui-bg-inverted: var(--ui-color-neutral-900);
+
+  --ui-border: var(--ui-color-neutral-200);
+  --ui-border-muted: var(--ui-color-neutral-200);
+  --ui-border-accented: var(--ui-color-neutral-300);
+  --ui-border-inverted: var(--ui-color-neutral-900);
+
+  --ui-primary: var(--color-red-500);
+}

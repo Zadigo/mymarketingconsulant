@@ -101,7 +101,7 @@
 
         <blocks-content>
           <blocks-section-container>
-            <lazy-grids-sticky-section hydrate-on-visible>
+            <lazy-grids-sticky-section to="/contact" hydrate-on-visible>
               <template #title>
                 Comment on travaille ensemble
               </template>
@@ -145,7 +145,7 @@
 </template>
 
 <script setup lang="ts">
-import { VueUseMotions } from '~/types'
+import { VueUseMotions, type PageTitleOrDescription } from '~/types'
 
 const xScroll = ref(0)
 const scrollableEl = useTemplateRef('scrollableEl')
@@ -154,4 +154,36 @@ if (import.meta.client) {
   const { x } = useScroll(scrollableEl)
   syncRef(x, xScroll, { direction: 'ltr' })
 }
+
+const { locale } = useI18n()
+
+const metaTitles: PageTitleOrDescription<typeof locale.value> = {
+  titles: {
+    en: 'Home',
+    fr: 'Accueil'
+  },
+  descriptions: {
+    en: 'I am a digital marketing consultant specializing in customer acquisition and growth. I help businesses structure and manage their acquisition through automations, Ads, useful AI solutions, server-side tracking, and websites designed to convert.',
+    fr: 'Je suis un consultant en marketing digital spécialisé dans l\'acquisition client et la croissance. J\'aide les entreprises à structurer et piloter leur acquisition grâce aux automatisations, aux Ads, à des solutions IA utiles, au tracking server-side, ainsi qu\'à des sites web pensés pour convertir.'
+  }
+}
+
+useSeoMeta({
+  title: metaTitles.titles[locale.value],
+  description: metaTitles.descriptions[locale.value],
+  ogTitle: metaTitles.titles[locale.value],
+  ogDescription: metaTitles.descriptions[locale.value],
+  ogImage: {
+    url: '/images/img1.jpg',
+    width: 1200,
+    height: 630,
+    alt: metaTitles.titles[locale.value]
+  }
+})
+
+defineOgImage('NuxtSeo.takumi', {
+  title: metaTitles.titles[locale.value],
+  description: metaTitles.descriptions[locale.value],
+  image: '/images/img1.jpg'
+})
 </script>
