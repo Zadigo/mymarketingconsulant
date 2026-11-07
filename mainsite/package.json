@@ -29,6 +29,7 @@
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxtjs/i18n": "10.6.0",
+    "@nuxtjs/robots": "^7.0.2",
     "@nuxtjs/seo": "6.0.1",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.1.0",

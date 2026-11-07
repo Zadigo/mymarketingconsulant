@@ -181,9 +181,11 @@ useSeoMeta({
   }
 })
 
-defineOgImage('NuxtSeo.takumi', {
-  title: metaTitles.titles[locale.value],
-  description: metaTitles.descriptions[locale.value],
-  image: '/images/img1.jpg'
-})
+if (import.meta.env.NODE_ENV !== 'test') {
+  defineOgImage('NuxtSeo.takumi', {
+    title: metaTitles.titles[locale.value],
+    description: metaTitles.descriptions[locale.value],
+    image: '/images/img1.jpg'
+  })
+}
 </script>
