@@ -6,15 +6,22 @@
       </svg>
       <span>Simple Process</span>
     </div>
-    <h1 class="text-4xl md:text-6xl font-semibold text-gray-900 mt-4">Get started for free today</h1>
-    <p class="max-w-lg text-center text-slate-500 mt-6">Join thousands of users who are already creating amazing things, completely free to start.</p>
-    <form class="relative flex items-center rounded-md border border-slate-200 mt-6 text-sm max-w-md w-full">
+
+    <h1 class="text-4xl md:text-6xl font-semibold text-primary-900 mt-4">
+      Get started for free today
+    </h1>
+
+    <p class="max-w-lg text-center text-primary-500 mt-6">
+      Join thousands of users who are already creating amazing things, completely free to start.
+    </p>
+
+    <form class="relative flex items-center rounded-md border border-primary-200 mt-6 text-sm max-w-md w-full">
       <svg class="absolute left-3" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M14 6 9.505 8.865a1 1 0 0 1-1.005 0L4 6" stroke="#90A1B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M16.3 1H2.7C1.761 1 1 1.84 1 2.875v11.25C1 15.161 1.761 16 2.7 16h13.6c.939 0 1.7-.84 1.7-1.875V2.875C18 1.839 17.239 1 16.3 1" stroke="#90A1B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
       <input type="email" name="email" placeholder="Enter your email" class="focus:outline-none pl-10 py-5 bg-transparent w-full" required>
-      <button class="shrink-0 mr-2 px-6 py-3 text-sm bg-gradient-to-r from-indigo-600 to-indigo-800 rounded-md active:scale-95 transition duration-300 text-white">
+      <button class="shrink-0 mr-2 px-6 py-3 text-sm bg-linear-to-r from-primary-600 to-primary-800 rounded-md active:scale-95 transition duration-300 text-primary-50">
         Subscribe now
       </button>
     </form>
