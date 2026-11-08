@@ -1,12 +1,6 @@
 allowBuilds:
-  esbuild: set this to true or false
-  vue-demi: set this to true or false
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
-  - esbuild
-  - unrs-resolver
-  - vue-demi
+  esbuild: true
+  vue-demi: true
 minimumReleaseAgeExclude:
   - html-validate@11.19.0
   - '@iconify-json/lucide@1.2.152'

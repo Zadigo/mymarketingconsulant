@@ -27,6 +27,7 @@
     "fix": "oxlint fix ."
   },
   "dependencies": {
+    "@faker-js/faker": "^10.6.0",
     "@nuxt/a11y": "1.0.0-alpha.1",
     "@nuxtjs/i18n": "10.6.0",
     "@nuxtjs/robots": "^7.0.2",
