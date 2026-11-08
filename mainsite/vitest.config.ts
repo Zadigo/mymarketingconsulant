@@ -38,8 +38,8 @@ export default defineConfig({
       await defineVitestProject({
         test: {
           name: 'integration',
-          include: [ 'test/integration/**/*.{test,spec}.ts' ],
-          environment: 'node',
+          include: ['test/integration/**/*.{test,spec}.ts'],
+          environment: 'nuxt',
           testTimeout: 20000,
           tags: [
             {
